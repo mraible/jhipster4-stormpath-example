@@ -35,7 +35,7 @@ public class LoggingAspect {
      */
     @Pointcut("within(com.stormpath.example.repository..*) || within(com.stormpath.example.service..*) || within(com.stormpath.example.web.rest..*)")
     public void loggingPointcut() {
-        // Method is empty as this is just a Poincut, the implementations are in the advices.
+        // Method is empty as this is just a Pointcut, the implementations are in the advices.
     }
 
     /**
