@@ -12,7 +12,9 @@ export class AccountService  {
             .map(data => {
                 // get nested account and set at top level
                 let account = data.account;
-                // change Stormpath groups to fit expected JHipster groups
+                // copy stormpath username to JHipster's expected `login`
+                account.login = account.username;
+                // change Stormpath groups to fit expected JHipster authorities
                 let authorities = [];
                 if (account.groups) {
                     account.groups.items.forEach(item => {
