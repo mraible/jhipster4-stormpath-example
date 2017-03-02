@@ -1,6 +1,6 @@
 {
   "generator-jhipster": {
-    "jhipsterVersion": "4.0.6",
+    "jhipsterVersion": "4.0.7",
     "baseName": "stormtrooper",
     "packageName": "com.stormpath.example",
     "packageFolder": "com/stormpath/example",
