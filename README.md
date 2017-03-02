@@ -1,4 +1,7 @@
-# stormtrooper
+# JHipster Stormpath Example
+
+**Prerequisites**: Java 8, Node.js, Maven, a [Stormpath Account](https://api.stormpath.com/register), and an `apiKey.properties` file in `~/stormpath/`.
+
 This application was generated using JHipster 4.0.6, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v4.0.6](https://jhipster.github.io/documentation-archive/v4.0.6).
 
 ## Development
