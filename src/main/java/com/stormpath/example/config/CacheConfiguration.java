@@ -40,6 +40,20 @@ public class CacheConfiguration {
             cm.createCache(com.stormpath.example.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(com.stormpath.example.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.stormpath.example.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            // Stormpath cacheable objects
+            cm.createCache(com.stormpath.sdk.tenant.Tenant.class.getName(), jcacheConfiguration);
+            cm.createCache(com.stormpath.sdk.application.Application.class.getName(), jcacheConfiguration);
+            cm.createCache(com.stormpath.sdk.application.ApplicationAccountStoreMapping.class.getName(), jcacheConfiguration);
+            cm.createCache(com.stormpath.sdk.application.webconfig.ApplicationWebConfig.class.getName(), jcacheConfiguration);
+            cm.createCache(com.stormpath.sdk.directory.Directory.class.getName(), jcacheConfiguration);
+            cm.createCache("com.stormpath.sdk.servlet.nonces", jcacheConfiguration);
+            cm.createCache(com.stormpath.sdk.oauth.AccessToken.class.getName(), jcacheConfiguration);
+            cm.createCache(com.stormpath.sdk.oauth.RefreshToken.class.getName(), jcacheConfiguration);
+            cm.createCache(com.stormpath.sdk.provider.Provider.class.getName(), jcacheConfiguration);
+            cm.createCache(com.stormpath.sdk.account.Account.class.getName(), jcacheConfiguration);
+            cm.createCache(com.stormpath.sdk.group.Group.class.getName(), jcacheConfiguration);
+            cm.createCache(com.stormpath.sdk.group.GroupMembership.class.getName(), jcacheConfiguration);
+            cm.createCache(com.stormpath.sdk.directory.CustomData.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
