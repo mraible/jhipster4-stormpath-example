@@ -6,11 +6,11 @@
         },
         "messages": {
             "validate": {
-                "login": {
-                    "required": "Your username is required.",
-                    "minlength": "Your username is required to be at least 1 character.",
-                    "maxlength": "Your username cannot be longer than 50 characters.",
-                    "pattern": "Your username can only contain lower-case letters and digits."
+                "name": {
+                    "required": "Your name is required.",
+                    "minlength": "Your name is required to be at least 1 character.",
+                    "maxlength": "Your name cannot be longer than 50 characters.",
+                    "pattern": "Your name can only contain lower-case letters and digits."
                 }
             },
             "success": "<strong>Registration saved!</strong> Please check your email for confirmation.",

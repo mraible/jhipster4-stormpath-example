@@ -36,21 +36,29 @@ export class RegisterComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit() {
-        this.renderer.invokeElementMethod(this.elementRef.nativeElement.querySelector('#login'), 'focus', []);
+        this.renderer.invokeElementMethod(this.elementRef.nativeElement.querySelector('#name'), 'focus', []);
     }
 
     register() {
         if (this.registerAccount.password !== this.confirmPassword) {
             this.doNotMatch = 'ERROR';
         } else {
+            // Split name on first space. Sorry for those that have a space in their first name!
+            let name = this.registerAccount.name.split(' ');
+            this.registerAccount.givenName = name[0];
+            this.registerAccount.surname = name[1];
+            delete this.registerAccount.name;
+
             this.doNotMatch = null;
             this.error = null;
             this.errorUserExists = null;
             this.errorEmailExists = null;
             this.languageService.getCurrent().then(key => {
-                this.registerAccount.langKey = key;
+                // todo: allow setting language as custom data
+                //this.registerAccount.langKey = key;
                 this.registerService.save(this.registerAccount).subscribe(() => {
                     this.success = true;
+
                 }, (response) => this.processError(response));
             });
         }

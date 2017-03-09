@@ -26,24 +26,20 @@
         <div class="col-md-8 offset-md-2">
             <form name="form" role="form" (ngSubmit)="register()" #registerForm="ngForm">
                 <div class="form-group">
-                    <label class="form-control-label" for="login" jhiTranslate="global.form.username">Username</label>
-                    <input type="text" class="form-control" [(ngModel)]="registerAccount.login" id="login" name="login" #login="ngModel" placeholder="{{'global.form.username.placeholder' | translate}}"
-                            required minlength="1" maxlength="50" pattern="^[_'.@A-Za-z0-9-]*$">
-                    <div *ngIf="login.dirty && login.invalid">
-                        <small class="form-text text-danger" *ngIf="login.errors.required" jhiTranslate="register.messages.validate.login.required">
-                            Your username is required.
+                    <label class="form-control-label" for="name" jhiTranslate="global.form.name">Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="registerAccount.name" id="name" name="name" #name="ngModel" placeholder="{{'global.form.name.placeholder' | translate}}"
+                            required minlength="1" maxlength="50">
+                    <div *ngIf="name.dirty && name.invalid">
+                        <small class="form-text text-danger" *ngIf="name.errors.required" jhiTranslate="register.messages.validate.name.required">
+                            Your name is required.
                         </small>
-                        <small class="form-text text-danger" *ngIf="login.errors.minlength"
-                                jhiTranslate="register.messages.validate.login.minlength">
+                        <small class="form-text text-danger" *ngIf="name.errors.minlength"
+                                jhiTranslate="register.messages.validate.name.minlength">
                             Your username is required to be at least 1 character.
                         </small>
-                        <small class="form-text text-danger" *ngIf="login.errors.maxlength"
-                                jhiTranslate="register.messages.validate.login.maxlength">
+                        <small class="form-text text-danger" *ngIf="name.errors.maxlength"
+                                jhiTranslate="register.messages.validate.name.maxlength">
                             Your username cannot be longer than 50 characters.
-                        </small>
-                        <small class="form-text text-danger" *ngIf="login.errors.pattern"
-                               jhiTranslate="register.messages.validate.login.pattern">
-                            Your username can only contain lower-case letters and digits.
                         </small>
                     </div>
                 </div>

@@ -119,3 +119,5 @@ stormpath:
       savers:
         cookie:
           enabled: false
+    register:
+      uri: /api/register

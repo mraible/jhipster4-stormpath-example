@@ -34,8 +34,8 @@
             "language": "Language"
         },
         "form": {
-            "username": "Username",
-            "username.placeholder": "Your username",
+            "name": "Name",
+            "name.placeholder": "Your Name",
             "newpassword": "New password",
             "newpassword.placeholder": "New password",
             "confirmpassword": "New password confirmation",
